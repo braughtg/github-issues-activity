@@ -25,7 +25,6 @@ public class DumbString {
 	 * @return the number of letters the two Strings have in common; -1 if either is null
 	 */
 	public static int lettersInCommon(String a, String b) {
-		if (a == null || b == null) return -1;
 		int common = 0;
 		for (char c : a.toCharArray()) {
 			if (b.indexOf(c) != -1) {
