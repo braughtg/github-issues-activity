@@ -11,7 +11,7 @@ public class DumbMath {
 		int sum = a + b;
 		
 		// check for overflow
-		if (a > 0 && b > 0 && sum < 0)
+		if (b > 0 && a > 0 && sum < 0)
 			throw new ArithmeticException("Overflow when adding " + a + " and " + b);
 
 		return sum;
