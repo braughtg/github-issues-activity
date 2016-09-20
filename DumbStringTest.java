@@ -25,7 +25,7 @@ public class DumbStringTest {
 		String b = "dcba";
 		int expected = 3;
 		int actual = DumbString.lettersInCommon(a, b);
-		assertEquals(expected, actual);
+		assertEquals("expecteed 3 letters in common",expected, actual);
 	}
 	
 	@Test
