@@ -9,14 +9,18 @@ public class DumbStringTest {
 	public void testAllDigitsTrue() {
 		DumbString ds = new DumbString();
 		String s = "12345";
-		assertTrue("wrong", ds.allDigits(s));
+		try{
+			assertTrue(ds.allDigits(s));
+		}catch(AssertionError e){
+			System.out.println("This string does not contain only digits");
+		}
 	}
 
 	@Test
 	public void testAllDigitsFalse() {
 		DumbString ds = new DumbString();
 		String s = "abcd5";
-		assertFalse("wrong", ds.allDigits(s));
+		assertFalse(ds.allDigits(s));
 	}
 	
 	@Test
@@ -25,7 +29,7 @@ public class DumbStringTest {
 		String b = "dcba";
 		int expected = 3;
 		int actual = DumbString.lettersInCommon(a, b);
-		assertEquals("wrong", expected, actual);
+		assertEquals(expected, actual);
 	}
 	
 	@Test
@@ -34,7 +38,7 @@ public class DumbStringTest {
 		String b = "ba";
 		int expected = 1;
 		int actual = DumbString.lettersInCommon(a, b);
-		assertEquals("wrong", expected, actual);
+		assertEquals(expected, actual);
 	}
 	
 }
