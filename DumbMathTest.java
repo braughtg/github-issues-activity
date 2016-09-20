@@ -20,7 +20,7 @@ public class DumbMathTest {
 		int b = -3;
 		int expected = 9;
 		int actual = DumbMath.add(a, b);
-		assertEquals(expected, actual);
+		assertEquals("Error on adding two negative numbers",expected, actual);
 	}
 	
 	@Test(expected = ArithmeticException.class)
