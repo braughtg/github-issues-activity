@@ -20,6 +20,15 @@ public class DumbStringTest {
 	}
 	
 	@Test
+	public void testLettersInCommon() {
+		String a = "abce";
+		String b = "dcba";
+		int expected = 3;
+		int actual = DumbString.lettersInCommon(a, b);
+		assertEquals(expected, actual);
+	}
+	
+	@Test
 	public void testLettersInCommonDoubleCount() {
 		String a = "aa";
 		String b = "ba";
