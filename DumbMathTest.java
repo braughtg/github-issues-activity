@@ -49,7 +49,7 @@ public class DumbMathTest {
 		int d2 = 3;
 		double expected = 5.0/6;
 		double actual = DumbMath.addFraction(n1, d1, n2, d2);
-		assertEquals(expected, actual, 0.00000000001);
+		assertEquals("something wrong", expected, actual, 0.00000000001);
 	}
 	
 
